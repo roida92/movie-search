@@ -18,10 +18,6 @@
   },
   "homepage": "https://github.com/roida92/movie-search#readme",
   "dependencies": {
-    "bootstrap": "^4.1.3",
-    "ejs": "^2.6.1",
-    "jquery": "^3.3.1",
-    "popper": "^1.0.1",
-    "popper.js": "^1.14.3"
+    "ejs": "^2.6.1"
   }
 }
