@@ -10,8 +10,21 @@
                 <label for="movieTitle">Movie Title</label>
                 <input type="movieTitle" class="form-control" id="txtMovieTitle" placeholder="Enter movie title">
             </div>
-            <button type="submit" class="btn btn-primary">Search</button> <!-- search button-->
+            <button type="submit" class="btn btn-primary" onclick="searchOMDB()">Search</button> <!-- search button-->
             </form>
         </div>
     </div>
 </div>
+
+<script type="application/javascript">
+    var movies; //variable for movie info
+
+    //Function that searches for the movie title entered using the OMDB API
+    function searchOMDB() {
+        //Access the API, passing the content of the textbox as a url parameter
+        fetch('http://www.omdbapi.com/?t=' + $("txtMovieTitle").val())
+            .then(function(response) {
+                movies = response.json(); //assign the response of the API to our variable
+            });
+    }
+</script>
