@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/roida92/movie-search/issues"
   },
-  "homepage": "https://github.com/roida92/movie-search#readme"
+  "homepage": "https://github.com/roida92/movie-search#readme",
+  "dependencies": {
+    "ejs": "^2.6.1"
+  }
 }
