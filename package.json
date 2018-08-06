@@ -1,0 +1,20 @@
+{
+  "name": "movie-search",
+  "version": "1.0.0",
+  "description": "Single Page Application for searching movies and saving favorites",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roida92/movie-search.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/roida92/movie-search/issues"
+  },
+  "homepage": "https://github.com/roida92/movie-search#readme"
+}
