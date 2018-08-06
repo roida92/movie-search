@@ -1,20 +1,27 @@
-<!--Use Bootstrap components-->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<!DOCTYPE html>
+<html>
+    <head> <!-- Importing Tools -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    </head>
 
-<!-- Page Content -->
-<div class="container">
-    <div class="card"> <!-- border around search fields -->
-        <div class="card-body">
-            <form> <!-- form to fill out and submit -->
-            <div class="form-group"> <!-- search field label and textbox-->        
-                <label for="movieTitle">Movie Title</label>
-                <input type="movieTitle" class="form-control" id="txtMovieTitle" placeholder="Enter movie title">
+    <body>
+        <!-- Page Content -->
+        <div class="container">
+            <div class="card"> <!-- border around search fields -->
+                <div class="card-body">
+                    <form> <!-- form to fill out and submit -->
+                        <div class="form-group"> <!-- search field label and textbox-->        
+                            <label for="movieTitle">Movie Title</label>
+                            <input type="movieTitle" class="form-control" id="txtMovieTitle" placeholder="Enter movie title">
+                        </div>
+                        <button type="submit" class="btn btn-primary" onclick="searchOMDB()">Search</button> <!-- search button-->
+                    </form>
+                </div>
             </div>
-            <button type="submit" class="btn btn-primary" onclick="searchOMDB()">Search</button> <!-- search button-->
-            </form>
         </div>
-    </div>
-</div>
+    </body>
+</html>
 
 <script type="application/javascript">
     var movies; //variable for movie info
@@ -22,7 +29,7 @@
     //Function that searches for the movie title entered using the OMDB API
     function searchOMDB() {
         //Access the API, passing the content of the textbox as a url parameter
-        fetch('http://www.omdbapi.com/?t=' + $("txtMovieTitle").val())
+        fetch('http://www.omdbapi.com/?t=' + $("#txtMovieTitle").val())
             .then(function(response) {
                 movies = response.json(); //assign the response of the API to our variable
             });
